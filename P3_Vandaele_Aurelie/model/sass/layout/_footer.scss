@@ -1,0 +1,39 @@
+/* Début Footer */
+footer {
+
+    @extend %grid-center;
+    @include grid-template-set (1);
+    padding: 1em;
+    background-color: $gris-sombre;
+    color: $txt-fond-sombre;
+
+     
+    & h2 {
+
+        @include grid-pos-set(1, auto, 1, 2);
+            padding: 1em 1em;
+            font-family: 'Shrikhand', cursive;
+            font-size: 18px;
+            font-weight: normal;
+            justify-self: start;
+    }
+
+    & ul{
+
+        @include grid-template-set ($footer);
+        @include grid-pos-set(2, auto, 1, 5);
+            display: grid;
+            gap: 1.5em;
+    }
+    
+    & .fa-solid {
+        padding: 0 1em 0 0; 
+    }
+   
+    & a {
+        text-decoration: none;
+        color: $txt-fond-sombre;
+       
+    }
+
+}
