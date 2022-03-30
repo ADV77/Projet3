@@ -111,8 +111,48 @@ footer a {
   color: #ffffff;
 }
 
+.loader {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 1000ms fadeOut 4500ms forwards;
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 16px solid #9356DC;
+  border-color: #9356DC transparent #9356DC transparent;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 main {
   font-family: "Roboto", sans-serif;
+  /*loader */
   /* Debut section localisation */
   /* Debut section presentation */
   /* Debut section commentCaMarche */
