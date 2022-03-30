@@ -1,0 +1,20 @@
+//basic grid setting
+
+%grid-center{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+%grid-left{
+    display: grid;
+    align-items: flex-start;
+    justify-items:flex-start;
+}
+
+%border-vert{
+    border-bottom: 3px $vert-clair solid;
+    width: 2.5em;
+    
+    
+}
