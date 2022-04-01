@@ -7,7 +7,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
-    /*loader */
 
     .loader {
 
@@ -19,7 +18,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: 1000ms fadeOut 1500ms forwards;
+        animation: 1000ms fadeOut 4500ms forwards;
     }
 
     .loader:after {
@@ -44,12 +43,18 @@
         }
         100% { 
             opacity: 0;
-            visibility: hidden;
         }
     }
 
-    main{
+    
+  
+
+main{
     font-family: 'Roboto', sans-serif;
+
+    /*loader */
+
+
 
     /* Debut section localisation */
     & .localisation {
@@ -298,7 +303,6 @@
                     }
 
                     & span {
-
                         position: absolute;
                         right: -5rem;
                         top: 0;
@@ -315,9 +319,35 @@
                             & .fa-circle-check{
                                 transform: rotate(-240deg);
                                 transition: all 0.5s;
-                            }       
+                                
+
+
+                            }
+                            
                     }
-                }  
+
+
+                }
+                & .list-item:hover{
+                    & p{
+                        width: 60%;
+                    }
+                    
+                    & span {
+                        right: 0;
+
+                        & i{
+                            transform: rotate(0deg);
+
+                        }
+                    }
+
+                    & strong {
+                        right: 6.5rem;
+                    }
+
+
+                }
             }
         }
         
