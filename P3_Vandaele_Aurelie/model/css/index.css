@@ -94,7 +94,19 @@ footer h2 {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   font-weight: normal;
-  justify-self: start;
+  justify-self: center;
+}
+@media screen and (max-width: 960px) {
+  footer h2 {
+    justify-self: start;
+    padding: 1em 1em 1em 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer h2 {
+    justify-self: start;
+    padding: 1em 1em 1em 0;
+  }
 }
 footer ul {
   grid-template-columns: repeat(4, 1fr);
@@ -102,6 +114,24 @@ footer ul {
   grid-column: 1 / 5;
   display: grid;
   gap: 1.5em;
+}
+@media screen and (max-width: 960px) {
+  footer ul {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: 2 / auto;
+    grid-column: 1 / 2;
+    justify-self: start;
+    gap: 0.8em;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer ul {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: 2 / auto;
+    grid-column: 1 / 2;
+    justify-self: start;
+    gap: 0.8em;
+  }
 }
 footer .fa-solid {
   padding: 0 1em 0 0;
@@ -111,6 +141,7 @@ footer a {
   color: #ffffff;
 }
 
+/*loader */
 .loader {
   position: fixed;
   z-index: 1;
@@ -120,7 +151,7 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: 1000ms fadeOut 4500ms forwards;
+  animation: 1000ms fadeOut 1500ms forwards;
 }
 
 .loader:after {
@@ -148,11 +179,11 @@ footer a {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 main {
   font-family: "Roboto", sans-serif;
-  /*loader */
   /* Debut section localisation */
   /* Debut section presentation */
   /* Debut section commentCaMarche */
@@ -390,18 +421,6 @@ main .menuResto__carte ul .list-item span {
 main .menuResto__carte ul .list-item span .fa-circle-check {
   transform: rotate(-240deg);
   transition: all 0.5s;
-}
-main .menuResto__carte ul .list-item:hover p {
-  width: 60%;
-}
-main .menuResto__carte ul .list-item:hover span {
-  right: 0;
-}
-main .menuResto__carte ul .list-item:hover span i {
-  transform: rotate(0deg);
-}
-main .menuResto__carte ul .list-item:hover strong {
-  right: 6.5rem;
 }
 main .menuResto a {
   justify-self: center;

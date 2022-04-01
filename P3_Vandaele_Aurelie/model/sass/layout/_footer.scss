@@ -15,7 +15,19 @@ footer {
             font-family: 'Shrikhand', cursive;
             font-size: 18px;
             font-weight: normal;
+            justify-self: center;
+
+        
+        @media screen and (max-width: 960px) {
             justify-self: start;
+            padding: 1em 1em 1em 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            justify-self: start;
+            padding: 1em 1em 1em 0;
+        }
+
     }
 
     & ul{
@@ -24,8 +36,27 @@ footer {
         @include grid-pos-set(2, auto, 1, 5);
             display: grid;
             gap: 1.5em;
-    }
+
+
+        @media screen and (max-width: 960px) {
+            @include grid-template-set (1);
+            @include grid-pos-set(2, auto, 1, 2);
+            justify-self: start;
+            gap: 0.8em; 
+                
+        }
     
+        @media screen and (max-width: 480px) {
+            @include grid-template-set (1);
+            @include grid-pos-set(2, auto, 1, 2);
+            justify-self: start;
+            gap: 0.8em;
+                
+        }
+    }
+
+
+
     & .fa-solid {
         padding: 0 1em 0 0; 
     }
