@@ -38,7 +38,7 @@ footer {
             gap: 1.5em;
 
 
-        @media screen and (max-width: 960px) {
+        @media screen and (max-width: $breakpoint-tablette) {
             @include grid-template-set (1);
             @include grid-pos-set(2, auto, 1, 2);
             justify-self: start;
@@ -46,12 +46,11 @@ footer {
                 
         }
     
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: $breakpoint-mobile) {
             @include grid-template-set (1);
             @include grid-pos-set(2, auto, 1, 2);
             justify-self: start;
             gap: 0.8em;
-                
         }
     }
 
