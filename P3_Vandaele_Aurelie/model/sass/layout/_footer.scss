@@ -42,7 +42,7 @@ footer {
             @include grid-template-set (1);
             @include grid-pos-set(2, auto, 1, 2);
             justify-self: start;
-            gap: 0.8em;
+            gap: 0.8em; 
                 
         }
     
