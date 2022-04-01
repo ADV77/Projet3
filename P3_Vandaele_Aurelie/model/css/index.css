@@ -235,6 +235,20 @@ main .commentCaMarche ol {
   justify-self: normal;
   counter-reset: section;
 }
+@media screen and (max-width: 960px) {
+  main .commentCaMarche ol {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: 2 / auto;
+    grid-column: 1 / 2;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .commentCaMarche ol {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: 2 / auto;
+    grid-column: 1 / 2;
+  }
+}
 main .commentCaMarche li::before {
   counter-increment: section;
   content: counter(section);

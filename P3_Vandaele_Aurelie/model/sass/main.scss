@@ -7,6 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
+
     /*loader */
 
     .loader {
@@ -110,7 +111,23 @@
             margin: 1em 1em 0;
             justify-self: normal;
             counter-reset: section;
+
+
+
+            @media screen and (max-width: $breakpoint-tablette) {
+                @include grid-template-set (1);
+                @include grid-pos-set(2, auto, 1, 2);
+            }
+        
+            @media screen and (max-width: $breakpoint-mobile) {
+                @include grid-template-set (1);
+                @include grid-pos-set(2, auto, 1, 2);
+            }
         }
+
+
+    
+        
         & li::before{
             counter-increment: section;
             content: counter(section);
@@ -325,4 +342,4 @@
             justify-self: center;
         }
     }
-}
+    }
