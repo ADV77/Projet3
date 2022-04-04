@@ -188,6 +188,7 @@ main {
   /* Debut section presentation */
   /* Debut section commentCaMarche */
   /* Debut section restaurants */
+  /* Debut pages menu */
 }
 main .localisation {
   padding: 1em;
@@ -398,6 +399,47 @@ main .menuResto__carte ul .list-item {
   font-size: 14px;
   cursor: pointer;
   overflow: hidden;
+  opacity: 0;
+  animation: appear 1000ms forwards;
+}
+main .menuResto__carte ul .list-item--1 {
+  animation-delay: 100ms;
+}
+main .menuResto__carte ul .list-item--2 {
+  animation-delay: 200ms;
+}
+main .menuResto__carte ul .list-item--3 {
+  animation-delay: 300ms;
+}
+main .menuResto__carte ul .list-item--4 {
+  animation-delay: 400ms;
+}
+main .menuResto__carte ul .list-item--5 {
+  animation-delay: 500ms;
+}
+main .menuResto__carte ul .list-item--6 {
+  animation-delay: 600ms;
+}
+main .menuResto__carte ul .list-item--7 {
+  animation-delay: 700ms;
+}
+main .menuResto__carte ul .list-item--8 {
+  animation-delay: 800ms;
+}
+main .menuResto__carte ul .list-item--9 {
+  animation-delay: 900ms;
+}
+main .menuResto__carte ul .list-item--10 {
+  animation-delay: 1000ms;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(2em);
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
 }
 main .menuResto__carte ul .list-item h4 {
   padding-bottom: 3px;
@@ -432,10 +474,29 @@ main .menuResto__carte ul .list-item span {
   align-items: center;
   transition: all 0.5s;
 }
-main .menuResto__carte ul .list-item span .fa-circle-check {
+main .menuResto__carte ul .list-item .fa-circle-check {
   transform: rotate(-240deg);
   transition: all 0.5s;
 }
-main .menuResto a {
+main .menuResto__carte ul .list-item :hover {
+  color: red;
+  /* SPAN au HOVER a revoir */
+  /* fin span au hover */
+}
+main .menuResto__carte ul .list-item :hover span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+  font-size: 1.5em;
+  background: #99E2D0;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+main .menuResto__carte ul a {
   justify-self: center;
 }
