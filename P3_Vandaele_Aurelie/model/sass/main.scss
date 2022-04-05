@@ -288,6 +288,17 @@ main
                 grid-gap: 1.5em;
                 margin: 1em 0 2.5em;
                 justify-self: normal;
+
+                @media screen and (max-width: $breakpoint-tablette) {
+                    @include grid-pos-set(2, auto, 1, 3);
+                    @include grid-template-set (2);  
+                }
+    
+                @media screen and (max-width: $breakpoint-mobile) {
+                    @include grid-pos-set(2, auto, 1, 2);
+                    @include grid-template-set (1);
+                }
+
              
                 & .list-item {
                     position: relative;

@@ -1,6 +1,9 @@
 /* Début Footer */
 footer {
 
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
     @extend %grid-center;
     @include grid-template-set (1);
     padding: 1em;
