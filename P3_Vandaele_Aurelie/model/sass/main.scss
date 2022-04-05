@@ -368,7 +368,7 @@ main
                     position: absolute;
                     right: 0;
                     top: 0;
-                    transform: translate 2s ease 2s;
+                    transition: translate 2s ease 2s;
 
                     & .fa-circle-check{
                         transform: rotate(360deg);
