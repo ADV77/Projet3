@@ -7,10 +7,11 @@
 }
 
 .btn {
-    padding: 1em 1.5em;
+    padding: 1em 3em;
     color: $txt-fond-sombre;
     transition: 250ms;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-self: center;
 
     &--gradient{
         background-image: 

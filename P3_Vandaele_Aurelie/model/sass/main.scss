@@ -343,60 +343,36 @@ main
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        transition: all 0.5s;
-
+                        transition: all 0.5s; 
                     }
 
+                }
 
-                            & .fa-circle-check{
-                                transform: rotate(-240deg);
-                                transition: all 0.5s;
-                            }  
-                            
-                    & :hover  {
-                        
-                    color: red;
+                & .list-item:hover strong {
+                    position: absolute;
+                    right: 7rem;
+                }
 
-    /* SPAN au HOVER a revoir */
-                        & span{
+                & .list-item:hover span{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform: translate 2s ease 2s;
 
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        width: 5rem;
-                        height: 100%;
-                        font-size: 1.5em;
-                        background: $aqua-tertiaire;
-                        color: $txt-fond-sombre;
+                    & .fa-circle-check{
+                        transform: rotate(360deg);
+                        transition: all 0.5s;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        transition: all 0.5s;
-                        
- 
-                        }
-
-    /* fin span au hover */
-                    }
-                
+                    }  
+                }  
                 
                 }
-               
-
-
-
-
-           
-
-
-
         
-        
-        & a {
-            justify-self: center;
-        }
-            }
+      
+
+
         }
     }
-
 }
