@@ -322,6 +322,11 @@ main
                     & h4 {
                         padding-bottom: 3px;
                         font-size: 16px;
+                        width: 85%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        transition: all 0.5s;
                     }
 
                     & p {
@@ -341,8 +346,8 @@ main
                         font-weight: 600;
                     }
 
+                    
                     & span {
-
                         position: absolute;
                         right: -5rem;
                         top: 0;
@@ -354,36 +359,58 @@ main
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        transition: all 0.5s; 
+                        transition: all 0.5s;
+
+                        & .fa-circle-check {
+                            transform: rotate(-240deg);
+                            transition: all 0.5s;
+                        }
                     }
 
                 }
 
-                & .list-item:hover strong {
-                    position: absolute;
-                    right: 7rem;
-                }
-
-                & .list-item:hover span{
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    transition: translate 2s ease 2s;
-
-                    & .fa-circle-check{
-                        transform: rotate(360deg);
-                        transition: all 0.5s;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }  
-                }  
                 
+   
+            }
+            
+        }
+        & .list-item:hover{
+
+            & p {
+                width: 65%; 
+                @media screen and (max-width: $breakpoint-tablette) {
+                    width: 55%;  
                 }
-        
-      
+    
+                @media screen and (max-width: $breakpoint-mobile) {
+                    width: 60%;
+                }
+            }
 
+            & h4 {
+                width: 80%; 
+                @media screen and (max-width: $breakpoint-tablette) {
+                    width: 65%;  
+                }
+    
+                @media screen and (max-width: $breakpoint-mobile) {
+                    width: 55%;
+                }
+            }
 
+            & strong {
+                position: absolute;
+                right: 7rem;
+            }
+
+            & span {
+                right: 0;
+                & i{
+                    transform: rotate(0deg);
+                    
+                } 
+
+            }
         }
     }
 }

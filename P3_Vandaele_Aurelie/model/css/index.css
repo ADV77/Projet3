@@ -461,6 +461,11 @@ main .menuResto__carte ul .list-item--10 {
 main .menuResto__carte ul .list-item h4 {
   padding-bottom: 3px;
   font-size: 16px;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.5s;
 }
 main .menuResto__carte ul .list-item p {
   padding-bottom: 3px;
@@ -491,20 +496,43 @@ main .menuResto__carte ul .list-item span {
   align-items: center;
   transition: all 0.5s;
 }
-main .menuResto__carte ul .list-item:hover strong {
+main .menuResto__carte ul .list-item span .fa-circle-check {
+  transform: rotate(-240deg);
+  transition: all 0.5s;
+}
+main .menuResto .list-item:hover p {
+  width: 65%;
+}
+@media screen and (max-width: 960px) {
+  main .menuResto .list-item:hover p {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .menuResto .list-item:hover p {
+    width: 60%;
+  }
+}
+main .menuResto .list-item:hover h4 {
+  width: 80%;
+}
+@media screen and (max-width: 960px) {
+  main .menuResto .list-item:hover h4 {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .menuResto .list-item:hover h4 {
+    width: 55%;
+  }
+}
+main .menuResto .list-item:hover strong {
   position: absolute;
   right: 7rem;
 }
-main .menuResto__carte ul .list-item:hover span {
-  position: absolute;
+main .menuResto .list-item:hover span {
   right: 0;
-  top: 0;
-  transition: translate 2s ease 2s;
 }
-main .menuResto__carte ul .list-item:hover span .fa-circle-check {
-  transform: rotate(360deg);
-  transition: all 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+main .menuResto .list-item:hover span i {
+  transform: rotate(0deg);
 }
